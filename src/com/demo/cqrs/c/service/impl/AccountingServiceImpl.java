@@ -20,10 +20,14 @@ public class AccountingServiceImpl implements AccountingService {
 		if (toAccount == null) {
 			throw new AccountNotFoundException();
 		}
-		
-		if() {
-			
+
+		if (fromAccount.ifBalanceLessThan(amount)) {
+			return TransferResult.unSuccess();
 		}
+
+		fromAccount.withdraw(amount);
+		toAccount.deposit(amount);
+		return TransferResult.success(fromAccount, toAccount, amount);
 
 	}
 

@@ -5,6 +5,16 @@ public class Account {
 	private int balance;
 	private int transactionNumber;
 
+	public void withdraw(int amount) {
+		balance -= amount;
+		transactionNumber++;
+	}
+
+	public void deposit(int amount) {
+		balance += amount;
+		transactionNumber++;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -27,6 +37,10 @@ public class Account {
 
 	public void setTransactionNumber(int transactionNumber) {
 		this.transactionNumber = transactionNumber;
+	}
+
+	public boolean ifBalanceLessThan(int value) {
+		return balance < value;
 	}
 
 }
