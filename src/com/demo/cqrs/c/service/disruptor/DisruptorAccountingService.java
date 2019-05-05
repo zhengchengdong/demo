@@ -7,12 +7,12 @@ import com.matrix.disruptor.DisruptorServiceBase;
 
 public class DisruptorAccountingService extends DisruptorServiceBase implements AccountingService {
 
+	private AccountingServiceImpl accountingServiceImpl;
+
 	DisruptorAccountingService(AccountingServiceImpl accountingServiceImpl) {
 		super(accountingServiceImpl);
 		this.accountingServiceImpl = accountingServiceImpl;
 	}
-
-	private AccountingServiceImpl accountingServiceImpl;
 
 	@Override
 	public TransferResult transfer(String fromAccountId, String toAccountId, Integer amount) throws Exception {
