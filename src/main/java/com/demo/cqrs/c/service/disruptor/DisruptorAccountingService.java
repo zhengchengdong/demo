@@ -3,8 +3,8 @@ package com.demo.cqrs.c.service.disruptor;
 import com.demo.cqrs.c.service.AccountingService;
 import com.demo.cqrs.c.service.impl.AccountingServiceImpl;
 import com.demo.cqrs.c.service.result.TransferResult;
-import com.matrix.disruptor.DisruptorRepository;
-import com.matrix.disruptor.DisruptorServiceBase;
+import com.matrix.dddsupport.disruptor.DisruptorRepository;
+import com.matrix.dddsupport.disruptor.DisruptorServiceBase;
 
 public class DisruptorAccountingService extends DisruptorServiceBase implements AccountingService {
 

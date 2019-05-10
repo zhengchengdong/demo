@@ -19,9 +19,4 @@ public class UserServiceImpl implements UserService {
 		this.userRepository = userRepository;
 	}
 
-	@Override
-	public String deleteUser(String userId) {
-		return userRepository.deleteUser(userId);
-	}
-
 }

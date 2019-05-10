@@ -16,11 +16,11 @@ import com.demo.cqrs.c.service.disruptor.DisruptorNames;
 import com.demo.cqrs.c.service.disruptor.DisruptorUserService;
 import com.demo.cqrs.c.service.impl.AccountingServiceImpl;
 import com.demo.cqrs.c.service.impl.UserServiceImpl;
-import com.matrix.disruptor.AggregateRootRepository;
-import com.matrix.disruptor.AggregateRootRepositorySnapshotRecoverer;
-import com.matrix.disruptor.CommandReplayer;
-import com.matrix.disruptor.DisruptorRepository;
-import com.matrix.disruptor.SnapshotService;
+import com.matrix.dddsupport.aggregate.AggregateRootRepository;
+import com.matrix.dddsupport.disruptor.DisruptorRepository;
+import com.matrix.dddsupport.recovery.commandreplay.CommandReplayer;
+import com.matrix.dddsupport.recovery.snapshot.AggregateRootRepositorySnapshotRecoverer;
+import com.matrix.dddsupport.recovery.snapshot.SnapshotService;
 
 @SpringBootApplication
 public class DemoApplication extends SpringBootServletInitializer {

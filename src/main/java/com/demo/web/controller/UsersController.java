@@ -28,12 +28,4 @@ public class UsersController {
 		return vo;
 	}
 
-	@RequestMapping("/deleteuser")
-	@ResponseBody
-	public CommonVO deleteuser(String userId) {
-		CommonVO vo = new CommonVO();
-		String deleted = userService.deleteUser(userId);
-		vo.setData(deleted);
-		return vo;
-	}
 }

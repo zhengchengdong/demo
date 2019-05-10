@@ -2,8 +2,8 @@ package com.demo.cqrs.c.service.disruptor;
 
 import com.demo.cqrs.c.service.UserService;
 import com.demo.cqrs.c.service.impl.UserServiceImpl;
-import com.matrix.disruptor.DisruptorRepository;
-import com.matrix.disruptor.DisruptorServiceBase;
+import com.matrix.dddsupport.disruptor.DisruptorRepository;
+import com.matrix.dddsupport.disruptor.DisruptorServiceBase;
 
 public class DisruptorUserService extends DisruptorServiceBase implements UserService {
 
@@ -19,17 +19,6 @@ public class DisruptorUserService extends DisruptorServiceBase implements UserSe
 		try {
 			executeProcess(DisruptorNames.users.name(), () -> {
 				userServiceImpl.createUser(userId);
-			});
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	@Override
-	public String deleteUser(String userId) {
-		try {
-			return executeFunction(DisruptorNames.users.name(), () -> {
-				return userServiceImpl.deleteUser(userId);
 			});
 		} catch (Exception e) {
 			throw new RuntimeException(e);
