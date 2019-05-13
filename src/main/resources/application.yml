@@ -7,5 +7,5 @@ server:
   port: 8080
   
 filepath:
-  snapshotFileBasePath: C:\Users\neo\eclipse-workspace\demo\snapshot
-  jFileBasePath: C:\Users\neo\eclipse-workspace\demo\journal
+  snapshotFileBasePath: C:\Users\Administrator\eclipse-workspace\demo\snapshot
+  jFileBasePath: C:\Users\Administrator\eclipse-workspace\demo\journal

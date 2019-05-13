@@ -1,9 +1,14 @@
 package com.demo.cqrs.q.dbo;
 
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.demo.cqrs.c.service.result.TransferResult;
 
+@Document
 public class AccountLogDbo {
 	private String id;
+	@Indexed
 	private String accountId;
 	private int transactionNumber;
 	private int balanceAfter;
